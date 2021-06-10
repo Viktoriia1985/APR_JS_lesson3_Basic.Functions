@@ -7,8 +7,8 @@
 // let array = [3, 10, 43, 53, 67, 1005, 54, 2, 0, 476];
 //
 // function showArray(arr) {
-//     console.log(arr);{
-//         for (const arrElement of arr) {
+//     console.log(arr);{                                  // TODO для чого область видимості ???
+//         for (const arrElement of arr) {                 // TODO непотрібний блок
 //             console.log(arrElement);
 //         }
 //     }
@@ -194,8 +194,8 @@
 //
 // function showArr(array) {
 //     console.log(array);
-//     {
-//         for (const arrayElement of array) {
+//     {                                                    // TODO для чого область видимості ???
+//         for (const arrayElement of array) {              // TODO непотрібний блок
 //             console.log(arrayElement);
 //         }
 //     }
@@ -219,7 +219,7 @@
 //
 // function squareOfCircle (r) {
 //     let square = 0;
-//     let P = 3.14;
+//     let P = 3.14;                                                        // TODO pi модна дістати з Math.PI
 //     for (const argument of arguments) {
 //         square = P * r*r;
 //     }
@@ -315,7 +315,7 @@
 //         }
 //     }
 //     // return number.concat(zero);
-//     return [...number,...zero];
+//     return [...number,...zero];     // TODO класне рішення
 // }
 //
 // console.log(myFunck([1, 0, 6, 0, 3]));
@@ -357,27 +357,57 @@
 // let n3 = 'Hermione Granger'
 //
 
-let n1 = '    Harry       Potter      ';
-let n2 = '    Ron       Whisley      ';
-let n3 = '    Hermione       Granger      ';
+// let n1 = '    Harry       Potter      ';
+// let n2 = '    Ron       Whisley      ';
+// let n3 = '    Hermione       Granger      ';
+//
+// const normalize = (str) => {
+//     return str
+//         .split(' ')
+//         .filter(x => {
+//                 if(x.length > 0) {
+//                     return true
+//                 } else {
+//                     return false
+//                 }
+//         })
+//         .join(' ')
+// }
+//
+// console.log(normalize(n1));
+// console.log(normalize(n2));
+// console.log(normalize(n2));
 
-const normalize = (str) => {
-    return str
-        .split(' ')
-        .filter(x => {
-                if(x.length > 0) {
-                    return true
-                } else {
-                    return false
-                }
-        })
-        .join(' ')
-}
 
-console.log(normalize(n1));
-console.log(normalize(n2));
-console.log(normalize(n2));
+// let n1 = '    Harry       Potter      ';
+// let n2 = '    Ron       Whisley      ';
+// let n3 = '    Hermione       Granger      ';
+//
+// const normalize = (str) => {
+//   return str
+//       .split(' ')
+//       .filter(x => x.length > 0 ? true : false)     // TODO все зо ти написала можна скоротити до такого
+//       .join(' ')
+// }
+//
+// console.log(normalize(n1));
+// console.log(normalize(n2));
+// console.log(normalize(n2));
 
 
+// let n1 = '    Harry       Potter      ';
+// let n2 = '    Ron       Whisley      ';
+// let n3 = '    Hermione       Granger      ';
+//
+// const normalize = (str) => {
+//   return str
+//       .split(' ')
+//       .filter(x => x.length > 0)                             // TODO GOOD
+//       .join(' ')
+// }
+//
+// console.log(normalize(n1));
+// console.log(normalize(n2));
+// console.log(normalize(n2));
 //-------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------
